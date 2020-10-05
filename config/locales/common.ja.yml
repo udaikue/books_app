@@ -22,3 +22,5 @@ ja:
     new: 本を登録しました
     edit: 本を更新しました
     destroy: 本を削除しました
+  confirm:
+    destroy: 本当に削除しますか?
