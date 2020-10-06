@@ -17,15 +17,11 @@ group :development, :test do
 end
 
 group :development do
+  gem 'rubocop-fjord', require: false
   gem "web-console", ">= 3.3.0"
   gem "listen", "~> 3.2"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
-  gem "rubocop", require: false
-  gem "rubocop-performance", require: false
-  gem "rubocop-rails", require: false
-  gem "rubocop-packaging", require: false
-  gem "rubocop-rspec"
 end
 
 group :test do
