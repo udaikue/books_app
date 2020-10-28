@@ -2,25 +2,51 @@ en:
   activerecord:
     models:
       book: Books
+      user: Users
     attributes:
       book:
         title: Title
         memo: Memo
         author: Author
         picture: Image
+      user:
+        username: Username
+        email: Email
+        password: Password
+        password_confirmation: Password confirmation
+        current_password: Current password
+        zipcode: Zip code
+        address: Address
+        profile: Profile
+        remember_me: remember me
   button:
     show: Show
     edit: Edit
     destroy: Delete
     new_book: New Book
     back: Back
+    log_in: Log in
+    log_out: Log out
+    sign_up: Sign up
+    users_list: Users list
+    books_list: Books list
+    forget_password: Forgot your password?
+    confirmation_email: Didn't receive confirmation instructions?
+    unlock_email: Didn't receive unlock instructions?
   title:
     books: Books
     new_book: New Book
     edit_book: Edit Book
+    users: Users
+    edit_profile: Edit Profile
+    log_in: Log in
+    sign_up: Sign up
   notice:
     new: Add book!!
     edit: Update book!!
     destroy: Delete book!!
   confirm:
     destroy: Are you sure delete?
+  information:
+    password: leave blank if you don't want to change it
+    current_password: we need your current password to confirm your changes

@@ -12,9 +12,24 @@
   <body>
     <div class="header">
     <header>
-      <nav>
-        <ul>
-          <li class="locale">
+      <nav class="top_nav">
+        <ul class="top_nav_items">
+          <li class="top_nav_item">
+          <%if request.path_info.include?("books") %>
+            <%= link_to t('button.users_list'), users_path %>
+          <% else %>
+            <%= link_to t('button.books_list'), books_path %>
+          <% end %>
+          </li>
+          <li class="top_nav_item">
+          <% if user_signed_in? %>
+            <%= link_to t('button.log_out'), destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to t('button.sign_up'), new_user_registration_path %> /
+            <%= link_to t('button.log_in'), new_user_session_path %>
+          <% end %>
+          </li>
+          <li class="top_nav_item">
             <% if I18n.locale.to_s == "en" %>
               <%= link_to("日本語", locale: 'ja') %>
             <% else %>
@@ -26,6 +41,8 @@
     </header>
     </div>
     <div class="content">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <%= yield %>
     </div>
   </body>
