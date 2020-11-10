@@ -33,6 +33,9 @@ en:
     forget_password: Forgot your password?
     confirmation_email: Didn't receive confirmation instructions?
     unlock_email: Didn't receive unlock instructions?
+    resend_confirmation: Resend confirmation instructions
+    send_reset_password: Send me reset password instructions
+    change_password: Change my password
   title:
     books: Books
     new_book: New Book
@@ -41,6 +44,9 @@ en:
     edit_profile: Edit Profile
     log_in: Log in
     sign_up: Sign up
+    resend_confirmation: Resend confirmation instructions
+    forgot_password: Forgot your password?
+    change_password: Change your password
   notice:
     new: Add book!!
     edit: Update book!!
