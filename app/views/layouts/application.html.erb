@@ -10,6 +10,23 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="header">
+    <header>
+      <nav>
+        <ul>
+          <li class="locale">
+            <% if I18n.locale.to_s == "en" %>
+              <%= link_to("日本語", locale: 'ja') %>
+            <% else %>
+              <%= link_to("English", locale: 'en') %>
+            <% end %>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    </div>
+    <div class="content">
+      <%= yield %>
+    </div>
   </body>
 </html>
