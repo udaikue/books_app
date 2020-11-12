@@ -2,25 +2,57 @@ ja:
   activerecord:
     models:
       book: 本
+      user: ユーザー
     attributes:
       book:
         title: タイトル
         memo: メモ
         author: 著者
         picture: 画像
+      user:
+        username: ユーザー名
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード(確認)
+        current_password: 現在のパスワード
+        zipcode: 郵便番号
+        address: 住所
+        profile: 自己紹介
+        remember_me: 記憶する
   button:
     show: 詳細
     edit: 編集
     destroy: 削除
     new_book: 新規作成
     back: 戻る
+    log_in: ログイン
+    log_out: ログアウト
+    sign_up: 登録
+    users_list: ユーザー一覧
+    books_list: 本の一覧
+    forget_password: パスワードを忘れた場合
+    confirmation_email: 確認メールが届かない場合
+    unlock_email: ロック解除メールが届かない場合
+    resend_confirmation: 確認メールの再送
+    send_reset_password: リセットメールを送信
+    change_password: パスワード変更
   title:
     books: 本の一覧
     new_book: 新しい本
     edit_book: 本の編集
+    users: ユーザー一覧
+    edit_profile: プロフィールの編集
+    log_in: ログイン
+    sign_up: 登録
+    resend_confirmation: 確認メールの再送
+    forgot_password: パスワードのリセット
+    change_password: パスワードの変更
   notice:
     new: 本を登録しました
     edit: 本を更新しました
     destroy: 本を削除しました
   confirm:
     destroy: 本当に削除しますか?
+  information:
+    password: パスワードの変更時のみ入力
+    current_password: ※必須
