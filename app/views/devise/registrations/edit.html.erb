@@ -28,11 +28,6 @@
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <%= t('information.current_password') %><br>
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="field">
     <%= f.label :zipcode %>
     <%= f.text_field :zipcode, onKeyUp: "AjaxZip3.zip2addr(this,'','user[address]','user[address]');" %>
   </div>

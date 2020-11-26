@@ -22,7 +22,7 @@
           <% end %>
           </li>
           <li class="top_nav_item">
-          <% if user_signed_in? %>
+          <% if user_signed_in? || logged_in? %>
             <%= link_to t('button.log_out'), destroy_user_session_path, method: :delete %>
           <% else %>
             <%= link_to t('button.sign_up'), new_user_registration_path %> /

@@ -14,7 +14,6 @@ ja:
         email: メールアドレス
         password: パスワード
         password_confirmation: パスワード(確認)
-        current_password: 現在のパスワード
         zipcode: 郵便番号
         address: 住所
         profile: 自己紹介
@@ -33,6 +32,10 @@ ja:
     forget_password: パスワードを忘れた場合
     confirmation_email: 確認メールが届かない場合
     unlock_email: ロック解除メールが届かない場合
+    resend_confirmation: 確認メールの再送
+    send_reset_password: リセットメールを送信
+    change_password: パスワード変更
+    sign_in_with_github: GitHubでサインイン
   title:
     books: 本の一覧
     new_book: 新しい本
@@ -41,6 +44,9 @@ ja:
     edit_profile: プロフィールの編集
     log_in: ログイン
     sign_up: 登録
+    resend_confirmation: 確認メールの再送
+    forgot_password: パスワードのリセット
+    change_password: パスワードの変更
   notice:
     new: 本を登録しました
     edit: 本を更新しました
@@ -49,4 +55,3 @@ ja:
     destroy: 本当に削除しますか?
   information:
     password: パスワードの変更時のみ入力
-    current_password: ※必須

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :edit, :update]
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :set_user, only: %I[show edit update destroy]
 
   def index
     @users = User.page(params[:page]).per(10)
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    redirect_to books_url, notice: t('notice.destroy')
+    redirect_to users_url
   end
 
   private
