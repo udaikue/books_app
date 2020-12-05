@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :set_book, only: %I[show edit update destroy]
 
   def index
     @books = Book.page(params[:page]).per(10)

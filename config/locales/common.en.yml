@@ -14,7 +14,6 @@ en:
         email: Email
         password: Password
         password_confirmation: Password confirmation
-        current_password: Current password
         zipcode: Zip code
         address: Address
         profile: Profile
@@ -36,6 +35,7 @@ en:
     resend_confirmation: Resend confirmation instructions
     send_reset_password: Send me reset password instructions
     change_password: Change my password
+    sign_in_with_github: Sign in with GitHub
   title:
     books: Books
     new_book: New Book
@@ -55,4 +55,3 @@ en:
     destroy: Are you sure delete?
   information:
     password: leave blank if you don't want to change it
-    current_password: we need your current password to confirm your changes

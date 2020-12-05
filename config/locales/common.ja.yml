@@ -14,7 +14,6 @@ ja:
         email: メールアドレス
         password: パスワード
         password_confirmation: パスワード(確認)
-        current_password: 現在のパスワード
         zipcode: 郵便番号
         address: 住所
         profile: 自己紹介
@@ -36,6 +35,7 @@ ja:
     resend_confirmation: 確認メールの再送
     send_reset_password: リセットメールを送信
     change_password: パスワード変更
+    sign_in_with_github: GitHubでサインイン
   title:
     books: 本の一覧
     new_book: 新しい本
@@ -55,4 +55,3 @@ ja:
     destroy: 本当に削除しますか?
   information:
     password: パスワードの変更時のみ入力
-    current_password: ※必須
