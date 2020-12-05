@@ -3,6 +3,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user, only: %I[show edit update destroy]
+  before_action :set_user_for_icon_destroy, only: %I[destroy_icon]
 
   def index
     @users = User.page(params[:page]).per(10)
@@ -32,13 +33,23 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  # アイコン画像の削除
+  def destroy_icon
+    @user.icon.purge
+    redirect_to user_path(@user)
+  end
+
   private
 
   def set_user
     @user = User.find(params[:id])
   end
 
+  def set_user_for_icon_destroy
+    @user = User.find(current_user.id)
+  end
+
   def user_params
-    params.require(:user).permit(:username, :email, :password, :zipcode, :address, :profile)
+    params.require(:user).permit(:username, :icon, :email, :password, :zipcode, :address, :profile)
   end
 end

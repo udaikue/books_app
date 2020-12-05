@@ -302,6 +302,7 @@ DEPENDENCIES
   carrierwave
   devise
   dotenv-rails
+  image_processing
   jbuilder (~> 2.7)
   kaminari
   listen (~> 3.2)

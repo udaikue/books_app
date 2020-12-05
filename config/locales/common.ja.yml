@@ -12,6 +12,7 @@ ja:
       user:
         username: ユーザー名
         email: メールアドレス
+        icon: アイコン
         password: パスワード
         password_confirmation: パスワード(確認)
         zipcode: 郵便番号
@@ -36,6 +37,7 @@ ja:
     send_reset_password: リセットメールを送信
     change_password: パスワード変更
     sign_in_with_github: GitHubでサインイン
+    icon_destroy: アイコン画像を削除
   title:
     books: 本の一覧
     new_book: 新しい本
