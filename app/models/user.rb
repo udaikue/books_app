@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   devise :omniauthable, omniauth_providers: %i[github]
 
+  has_one_attached :icon
+
   validates :username, presence: true, length: { minimum: 3, maximum: 20 }
   validates :profile, length: { maximum: 500 }
 

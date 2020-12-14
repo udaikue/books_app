@@ -12,6 +12,7 @@ en:
       user:
         username: Username
         email: Email
+        icon: Icon
         password: Password
         password_confirmation: Password confirmation
         zipcode: Zip code
@@ -36,6 +37,7 @@ en:
     send_reset_password: Send me reset password instructions
     change_password: Change my password
     sign_in_with_github: Sign in with GitHub
+    icon_destroy: Icon Delete
   title:
     books: Books
     new_book: New Book

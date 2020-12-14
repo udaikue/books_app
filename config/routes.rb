@@ -5,10 +5,10 @@ Rails.application.routes.draw do
       registrations: 'users/registrations',
       omniauth_callbacks: 'users/omniauth_callbacks'
   }
-  delete '/logout' => 'sessions#destroy'
-  get 'users/show' => 'users#show'
   root 'books#index'
   scope '(:locale)' do
-    resources :books, :users
+    resources :books
+    resources :users, except: :create
+    resource :user_icons, only: :destroy
   end
 end

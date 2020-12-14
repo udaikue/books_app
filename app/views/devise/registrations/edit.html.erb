@@ -9,6 +9,16 @@
   </div>
 
   <div class="field">
+    <%= f.label :icon %>
+    <% if @user.icon.attached? %>
+      <%= image_tag @user.icon.variant(resize_to_limit: [100, 100]) %><br>
+      <%= link_to t("button.icon_destroy"), user_icons_path, method: :delete, data: { confirm: t("confirm.destroy") } %>
+    <% else %>
+      <%= f.file_field :icon %>
+    <% end %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %>
     <%= f.email_field :email, autocomplete: "email" %>
   </div>
