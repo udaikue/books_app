@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   scope '(:locale)' do
     resources :books
     resources :users, except: :create
-    resources :user_icons, only: :destroy
+    resource :user_icons, only: :destroy
   end
 end
