@@ -19,6 +19,8 @@ en:
         address: Address
         profile: Profile
         remember_me: remember me
+        followings: followings
+        followers: followers
   button:
     show: Show
     edit: Edit
@@ -38,6 +40,8 @@ en:
     change_password: Change my password
     sign_in_with_github: Sign in with GitHub
     icon_destroy: Icon Delete
+    unfollow: Unfollow
+    follow: Follow
   title:
     books: Books
     new_book: New Book
@@ -49,6 +53,8 @@ en:
     resend_confirmation: Resend confirmation instructions
     forgot_password: Forgot your password?
     change_password: Change your password
+    followings: Followings
+    followers: Followers
   notice:
     new: Add book!!
     edit: Update book!!

@@ -1,13 +1,16 @@
 <p>
-  <strong><%= User.human_attribute_name("username") %>:</strong>
-  <%= @user.username %>
+  <% if @user.icon.attached? %>
+    <%= image_tag @user.icon.variant(resize_to_limit: [100, 100]) %>
+  <% end %>
 </p>
 
 <p>
-  <% if @user.icon.attached? %>
-    <strong><%= User.human_attribute_name("icon") %>:</strong>
-    <%= image_tag @user.icon.variant(resize_to_limit: [100, 100]) %>
-  <% end %>
+  <%= link_to "#{@user.followers.count} #{User.human_attribute_name("followings")}", followings_user_path %> <%= link_to "#{@user.followings.count} #{User.human_attribute_name("followers")}", followers_user_path %>
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name("username") %>:</strong>
+  <%= @user.username %>
 </p>
 
 <p>
@@ -28,6 +31,19 @@
 <p>
   <strong><%= User.human_attribute_name("profile") %>:</strong>
   <%= @user.profile %>
+</p>
+
+<p>
+<% unless @user == current_user %>
+  <% if current_user.following?(@user) %>
+    <%= button_to t('button.unfollow'), relationship_path, method: :delete %>
+  <% else %>
+      <%= form_for(@user.followers.build) do |f| %>
+        <%= hidden_field_tag :follow_id, @user.id %>
+        <%= f.submit t('button.follow') %>
+      <% end %>
+    <% end %>
+<% end %>
 </p>
 
 <%= link_to t("button.edit"), edit_user_path(current_user) %> |

@@ -60,12 +60,12 @@ a:hover {
   background-color: #ffe4e1;
 }
 
-th {
-  padding-bottom: 5px;
+table, th, td {
+  border: none;
 }
 
 td {
-  padding: 0 5px 7px;
+  padding: 8px 20px;
 }
 
 div.field,
