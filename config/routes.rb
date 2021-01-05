@@ -14,6 +14,6 @@ Rails.application.routes.draw do
       end
     end
     resource :user_icons, only: :destroy
-    resources :relationships, only: %I[create destroy]
+    resources :relationships, only: %i[create destroy]
   end
 end
