@@ -43,8 +43,8 @@ class User < ApplicationRecord
   end
 
   # フォローする
-  def follow(other_user_id)
-    followers.create(following_id: other_user_id)
+  def follow(other_user)
+    followers.create(following_id: other_user.id)
   end
 
   # フォローしているか確認
