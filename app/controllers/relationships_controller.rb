@@ -1,14 +1,21 @@
 # frozen_string_literal: true
 
 class RelationshipsController < ApplicationController
+  before_action :set_user
+
   def create
-    user = User.find(params[:follow_id])
-    current_user.follow(user)
-    redirect_to user_path(user)
+    current_user.follow(@user)
+    redirect_to user_path(@user)
   end
 
   def destroy
-    Relationship.find_by(follower_id: current_user.id, following_id: params[:id]).destroy
+    current_user.unfollow(@user)
     redirect_to user_path
+  end
+
+  private
+
+  def set_user
+    @user = User.find(params[:follow_id])
   end
 end
