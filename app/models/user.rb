@@ -42,17 +42,14 @@ class User < ApplicationRecord
     SecureRandom.uuid
   end
 
-  # フォローする
   def follow(other_user)
     followers.create(following_id: other_user.id)
   end
 
-  # アンフォローする
   def unfollow(other_user_id)
     followers.find_by(following_id: other_user_id).destroy
   end
 
-  # フォローしているか確認
   def following?(other_user)
     following_users.include?(other_user)
   end
