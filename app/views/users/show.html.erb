@@ -5,7 +5,7 @@
 </p>
 
 <p>
-  <%= link_to "#{@user.followers.count} #{User.human_attribute_name("followings")}", followings_user_path %> <%= link_to "#{@user.followings.count} #{User.human_attribute_name("followers")}", followers_user_path %>
+  <%= link_to "#{@user.followers.count} #{User.human_attribute_name("followings")}", followings_user_path(@user) %> <%= link_to "#{@user.followings.count} #{User.human_attribute_name("followers")}", followers_user_path(@user) %>
 </p>
 
 <p>

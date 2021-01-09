@@ -10,7 +10,7 @@ class RelationshipsController < ApplicationController
 
   def destroy
     current_user.unfollow(@user)
-    redirect_to user_path
+    redirect_to user_path(@user)
   end
 
   private
