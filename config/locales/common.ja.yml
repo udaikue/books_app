@@ -19,6 +19,8 @@ ja:
         address: 住所
         profile: 自己紹介
         remember_me: 記憶する
+        followings: フォロー中
+        followers: フォロワー
   button:
     show: 詳細
     edit: 編集
@@ -38,6 +40,8 @@ ja:
     change_password: パスワード変更
     sign_in_with_github: GitHubでサインイン
     icon_destroy: アイコン画像を削除
+    unfollow: フォロー解除
+    follow: フォロー
   title:
     books: 本の一覧
     new_book: 新しい本
@@ -49,6 +53,8 @@ ja:
     resend_confirmation: 確認メールの再送
     forgot_password: パスワードのリセット
     change_password: パスワードの変更
+    followings: フォロー中
+    followers: フォロワー
   notice:
     new: 本を登録しました
     edit: 本を更新しました

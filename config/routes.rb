@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   root 'books#index'
   scope '(:locale)' do
     resources :books
-    resources :users, except: :create
+    resources :users, except: :create do
+      member do
+        get :followings, :followers
+      end
+    end
     resource :user_icons, only: :destroy
+    resources :relationships, only: %i[create destroy]
   end
 end

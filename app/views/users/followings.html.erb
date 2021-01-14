@@ -1,0 +1,5 @@
+<h1><%= t("title.followings") %></h1>
+
+<%= render 'users', users: @followings %>
+
+<%= link_to t("button.back"), user_path(@user) %>
